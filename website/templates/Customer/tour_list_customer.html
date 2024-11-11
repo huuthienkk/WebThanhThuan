@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lí Tours</title>  
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+    
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <span class="logo">Tiring Travel</span>
+            <nav class="nav-links">
+                <a href="{% url 'customer_home' %}">Trang Chủ</a>
+                <a href="{% url 'tour_list_customer' %}">Tours</a>
+                <a href="{% url 'register_tour' %}">Đăng ký tour</a>
+                <a href="{% url 'contact' %}">Liên Hệ</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'profile' %}" class="account-link">Tài khoản</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Đăng Nhập</a>
+                    <a href="{% url 'register' %}">Đăng Ký</a>
+                {% endif %}
+            </nav>
+        </div>
+    </header>
+    <!-- Phần Nội dung Chính -->
+    <main>
+        <h1>Danh Sách Tour Du Lịch</h1>
+        
+        <div class="search-container">
+            <form method="get">
+                <input type="text" name="q" placeholder="Tìm kiếm tour..." class="search-input">
+                <button type="submit" class="search-button">Tìm kiếm</button>
+            </form>
+        </div>
+
+        <div class="tour-list">
+            {% for tour in tours %}
+                <div class="tour-card">
+                    <h3>{{ tour.name }}</h3>
+                    <p>Giá: {{ tour.price }}</p>
+                    <p>Ngày bắt đầu: {{ tour.start_date }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+
+</body>
+</html>

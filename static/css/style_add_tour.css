@@ -1,0 +1,40 @@
+/* Định dạng cho container chính */
+.container {
+    max-width: 600px; /* Đặt chiều rộng tối đa cho form */
+    margin: 0 auto; /* Căn giữa container */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 30px; /* Khoảng cách bên trong container */
+    border: 1px solid #ddd; /* Viền xung quanh */
+    border-radius: 8px; /* Bo góc cho khung */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+}
+
+/* Tiêu đề form */
+.container h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #1E90FF; /* Màu xanh cho tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Định dạng cho các thành phần trong form */
+form {
+    display: flex;
+    flex-direction: column; /* Căn các thành phần theo cột */
+}
+
+/* Định dạng cho các nút */
+button[type="submit"] {
+    background-color: #1E90FF; /* Màu nền xanh cho nút */
+    color: #fff; /* Màu chữ trắng */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border: none; /* Xóa viền mặc định */
+    border-radius: 5px; /* Bo góc nút */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    font-size: 1em; /* Kích thước chữ */
+    margin-top: 15px; /* Khoảng cách phía trên nút */
+    transition: background-color 0.3s; /* Hiệu ứng khi hover */
+}
+
+button[type="submit"]:hover {
+    background-color: #4682B4; /* Màu xanh đậm hơn khi hover */
+}

@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+</head>
+<body>
+    {% include 'Customer/header_customer.html' %}
+    
+    <main>
+        <h1>Liên Hệ</h1>
+        <section class="contact-info">
+            <p>Chúng tôi luôn sẵn sàng hỗ trợ bạn. Hãy gửi thông tin bên dưới để liên lạc với chúng tôi.</p>
+            <p><strong>Số điện thoại:</strong> <a href="tel:+08220222">0822 0222</a></p>
+            <p>Hoặc bạn có thể gửi email đến <a href="mailto:contact@tiringtravel.com">contact@tiringtravel.com</a>.</p>
+            <p>Chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất.</p>
+        </section>
+    </main>
+    
+
+</body>
+</html>

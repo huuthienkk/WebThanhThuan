@@ -1,0 +1,43 @@
+/* Khung danh sách tour */
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các ô */
+    justify-content: center; /* Căn giữa danh sách tour */
+    margin-top: 20px;
+}
+
+/* Khung cho từng tour */
+.tour-card {
+    background-color: #fff; /* Màu nền trắng cho ô */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    padding: 20px; /* Padding bên trong ô */
+    width: 300px; /* Độ rộng của ô */
+    text-align: center; /* Căn giữa nội dung trong ô */
+}
+
+/* Tiêu đề tour */
+.tour-card h3 {
+    color: #1E90FF; /* Màu xanh cho tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Các nút hành động */
+.tour-actions {
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+.btn-edit, .btn-delete, .btn-add {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #1E90FF; /* Màu xanh */
+    color: white;
+    border-radius: 5px; /* Bo tròn nút */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-add:hover {
+    background-color: #4682B4; /* Màu xanh đậm hơn khi hover */
+}

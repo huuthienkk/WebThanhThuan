@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/customer_list.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Staff/header_staff.html' %}
+    
+    <main>
+        <div class="customer-list-container">
+            <h2>Danh Sách Khách Hàng</h2>
+            <ul class="customer-list">
+                {% for customer in customers %}
+                    <li class="customer-item">
+                        <span class="customer-name">{{ customer.username }}</span>
+                        <span class="customer-email">Email: {{ customer.email }}</span> <!-- Hiển thị email ở dòng dưới -->
+                    </li>
+                {% empty %}
+                    <li class="no-customer">Không có khách hàng nào.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+
+</body>
+</html>

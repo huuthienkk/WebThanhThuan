@@ -1,0 +1,54 @@
+/* Khung tổng quát cho danh sách khách hàng */
+.customer-list-container {
+    background-color: #ffffff; /* Màu nền trắng */
+    border: 1px solid #ddd; /* Viền khung */
+    border-radius: 8px; /* Bo góc cho khung */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    padding: 20px; /* Khoảng cách bên trong */
+    max-width: 600px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa khung tổng thể */
+}
+
+/* Tiêu đề cho danh sách khách hàng */
+.customer-list-container h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #1E90FF; /* Màu xanh cho tiêu đề */
+    margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Danh sách khách hàng */
+ul.customer-list {
+    list-style-type: none; /* Xóa các dấu chấm của danh sách */
+    padding: 0; /* Xóa padding mặc định */
+}
+
+/* Mỗi mục khách hàng */
+.customer-item {
+    background-color: #f8f9fa; /* Màu nền cho từng mục khách hàng */
+    border: 1px solid #dee2e6; /* Viền cho từng mục */
+    border-radius: 5px; /* Bo góc cho từng mục */
+    padding: 15px; /* Khoảng cách bên trong */
+    margin-bottom: 15px; /* Khoảng cách dưới mỗi mục */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+    text-align: center; /* Căn giữa nội dung */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+}
+
+/* Tên và email của khách hàng */
+.customer-name {
+    font-weight: bold; /* Chữ đậm cho tên */
+    color: #333; /* Màu chữ cho tên */
+}
+
+.customer-email {
+    display: block; /* Đặt email ở dòng dưới */
+    margin-top: 5px; /* Khoảng cách phía trên email */
+    color: #555; /* Màu chữ cho email */
+}
+
+/* Thông báo không có khách hàng */
+.no-customer {
+    text-align: center; /* Căn giữa thông báo */
+    color: #888; /* Màu xám cho thông báo */
+    font-style: italic; /* Chữ in nghiêng */
+}

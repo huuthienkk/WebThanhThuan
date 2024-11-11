@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Customer/header_customer.html' %}
+    
+    <main>
+        <!-- Nội dung của trang customer_home -->
+        <section class="image-section">
+            <img src="{% static 'image/background.jpg' %}" alt="Ảnh Đà Nẵng">
+            <div class="image-text">
+                <h1> Khám phá Thế Giới </h1>
+                <p>Những điểm đến tuyệt vời đang chờ đón bạn !</p>
+            </div>
+        </section>
+
+        <section class="top-places">
+            <h2 class="section-title">Top Địa Điểm Được Yêu Thích</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="{% static 'image/caurong.jpg' %}" alt="Cầu Rồng">
+                    <h3>Cầu Rồng(Đà Nẵng) </h3>
+                    <p>Mô tả ngắn về địa điểm này.</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'image/Hue.jpg' %}" alt="Hue">
+                    <h3>Kinh Thành Huế </h3>
+                    <p>Mô tả ngắn về địa điểm này.</p>
+                </div>
+                <div class="card">
+                    <img src="{% static 'image/Hanoi.png' %}" alt="Ha Noi">
+                    <h3>Hà Nội ( Lăng Bác )</h3>
+                    <p>Mô tả ngắn về địa điểm này.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #1E90FF; /* Xanh nước biển nhạt */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+/* Khung cho danh sách khách hàng */
+.customer-list-container {
+    background-color: #ffffff; /* Màu nền trắng */
+    border: 1px solid #ddd; /* Viền xung quanh */
+    border-radius: 5px; /* Bo góc */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho khung */
+    padding: 20px; /* Khoảng cách cho nội dung */
+    margin: 20px; /* Khoảng cách cho khung */
+}
+
+/* Tiêu đề danh sách khách hàng */
+h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #1E90FF; /* Màu xanh cho tiêu đề */
+}
+
+/* Danh sách khách hàng */
+ul.customer-list {
+    list-style-type: none; /* Xóa dấu chấm trong danh sách */
+    padding: 0; /* Xóa padding */
+    display: flex; /* Sử dụng flexbox */
+    flex-wrap: wrap; /* Cho phép các mục chuyển sang hàng mới */
+    justify-content: center; /* Căn giữa danh sách */
+}
+
+/* Mỗi mục khách hàng */
+.customer-item {
+    background-color: #f8f9fa; /* Màu nền cho từng mục khách hàng */
+    border: 1px solid #dee2e6; /* Viền cho từng mục */
+    border-radius: 4px; /* Bo góc cho từng mục */
+    padding: 10px; /* Khoảng cách cho từng mục */
+    margin: 10px; /* Khoảng cách giữa các mục */
+    width: 200px; /* Đặt chiều rộng của mục */
+    text-align: center; /* Căn giữa nội dung */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+/* Đảm bảo email nằm trên một dòng riêng */
+.customer-email {
+    display: block; /* Đặt thành block để tách dòng */
+    margin-top: 5px; /* Khoảng cách trên cho email */
+    color: #555; /* Màu cho email */
+}
+
+/* Hiệu ứng hover cho từng mục khách hàng */
+.customer-item:hover {
+    background-color: #e2e6ea; /* Màu nền khi hover */
+}
+
+/* Không có khách hàng */
+.no-customer {
+    text-align: center; /* Căn giữa */
+    color: #888; /* Màu xám cho thông báo */
+}
+

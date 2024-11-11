@@ -1,0 +1,41 @@
+/* Bảng thông tin đăng ký tour */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: #1E90FF; /* Màu xanh nước biển cho tiêu đề */
+    color: white;
+}
+
+table tr {
+    background-color: #ffffff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu nền cho các hàng chẵn */
+}
+
+table tr:hover {
+    background-color: #e8f5e9; /* Màu nền khi hover */
+}
+
+table td {
+    border: 1px solid #ddd; /* Đường viền cho ô */
+    transition: background-color 0.3s;
+}
+
+/* Thông điệp khi không có đăng ký */
+p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #333; /* Màu sắc cho thông điệp */
+}

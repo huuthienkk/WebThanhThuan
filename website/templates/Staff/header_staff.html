@@ -1,0 +1,20 @@
+<!-- header.html -->
+<header>
+    <div class="header-content">
+        <span class="logo">Trang Nhân Viên </span>
+        <nav class="nav-links">
+            <a href="{% url 'staff_home' %}">Trang Chủ</a>
+            <a href="{% url 'customer_list' %}">Quản lí khách hàng </a>
+            <a href="{% url 'tour_staff_list' %}">Danh sách tour</a>
+            <a href="{% url 'tour_registrations' %}">Tours ĐK</a>   
+            <a href="{% url 'add_tour' %}">Thêm Tour </a>
+
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="account-link">Tài khoản</a>
+            {% else %}
+                <a href="{% url 'login' %}">Đăng Nhập</a>
+                <a href="{% url 'register' %}">Đăng Ký</a>
+            {% endif %}
+        </nav>
+    </div>
+</header>

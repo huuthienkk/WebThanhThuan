@@ -1,0 +1,18 @@
+<!-- header.html -->
+<header>
+    <div class="header-content">
+        <span class="logo">Tiring Travel</span>
+        <nav class="nav-links">
+            <a href="{% url 'customer_home' %}">Trang Chủ</a>
+            <a href="{% url 'tour_list_customer' %}">Tours</a>
+            <a href="{% url 'register_tour' %}">Đăng ký tour</a>
+            <a href="{% url 'contact' %}">Liên Hệ</a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'profile' %}" class="account-link">Tài khoản</a>
+            {% else %}
+                <a href="{% url 'login' %}">Đăng Nhập</a>
+                <a href="{% url 'register' %}">Đăng Ký</a>
+            {% endif %}
+        </nav>
+    </div>
+</header>

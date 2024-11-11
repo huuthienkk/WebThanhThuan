@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_add_tour.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Staff/header_staff.html' %}
+    
+    <main>
+        <div class="container">
+            <h2>Thêm Tour Du Lịch</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Thêm Tour</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

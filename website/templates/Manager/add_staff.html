@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Nhân Viên Mới</title>
+    <link rel="stylesheet" href="{% static 'css/stylehome.css' %}">
+</head>
+<body>
+
+    <header>
+        Dịch Vụ Du Lịch Đà Nẵng
+    </header>
+
+    <nav>
+        <a href="{% url 'manager_home' %}">Trang Chủ</a>
+        <a href="{% url 'staff_list' %}">Quản lí Nhân Viên</a>
+        <a href="{% url 'tour_list' %}">Quản lí Tours</a>
+        <a href="{% url 'add_tour' %}">Thêm Tour</a>
+        {% if user.is_authenticated %}
+            <div class="dropdown">
+                <button class="dropbtn">Xin chào, {{ user.username }}</button>
+                <div class="dropdown-content">
+                    <a href="{% url 'profile' %}">Thông tin cá nhân</a>
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit">Đăng Xuất</button>
+                    </form>
+                </div>
+            </div>
+        {% else %}
+            <a href="{% url 'login' %}">Đăng Nhập</a>
+            <a href="{% url 'register' %}">Đăng Ký</a>
+        {% endif %}
+    </nav>
+
+    <main>
+        <h2>Thêm Nhân Viên Mới</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Thêm Nhân Viên</button>
+        </form>
+        <a href="{% url 'staff_list' %}" class="btn-back">Quay lại danh sách nhân viên</a>
+    </main>
+
+</body>
+</html>
+

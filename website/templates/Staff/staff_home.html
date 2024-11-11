@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Staff/header_staff.html' %}
+    
+    <main>
+        <h1>Trang Chủ Nhân Viên</h1>
+        <p>Quản lý khách hàng và tư vấn cho khách hàng.</p>
+    </main>
+
+</body>
+</html>

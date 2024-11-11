@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tour</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+</head>
+<body>
+    {% include 'Customer/header_customer.html' %}
+    <main>
+        <h1>Đăng Ký Tour</h1>
+        <div class="registration-box">
+            <form method="POST">
+                {% csrf_token %}
+                <label for="tour">Chọn Tour:</label>
+                <select name="tour_id" id="tour">
+                    {% for tour in tours %}
+                        <option value="{{ tour.id }}">{{ tour.name }} - Giá: {{ tour.price }}</option>
+                    {% endfor %}
+                </select>
+                <div class="form-actions">
+                    <button type="submit">Đăng Ký</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+    
+    
+
+</body>
+</html>

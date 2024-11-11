@@ -1,0 +1,6 @@
+<h2>Chỉnh Sửa Tour Du Lịch</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Lưu Thay Đổi</button>
+</form>

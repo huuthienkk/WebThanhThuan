@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Manager/header_manager.html' %}
+    
+    <main>
+        <h1>Trang Chủ Quản lí !</h1>
+        <p>Quản lý khách hàng, quản lí nhân viên và cập nhật tour .</p>
+    </main>
+
+</body>
+</html>

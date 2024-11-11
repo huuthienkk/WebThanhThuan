@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/staff_list.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Manager/header_manager.html' %}
+    
+    <main>
+        <h1 class="staff-list-header">Danh Sách Nhân Viên</h1>
+        <a href="{% url 'add_staff' %}" class="btn-add-staff">Thêm Nhân Viên Mới</a>
+
+        
+        <div class="staff-list">
+            {% for staff in staff_members %}
+                <div class="staff-card">
+                    <p><strong>{{ staff.username }}</strong></p>
+                    <p>Email: {{ staff.email }}</p>
+                </div>
+            {% empty %}
+                <div>Không có nhân viên nào.</div>
+            {% endfor %}
+        </div>
+    </main>
+
+</body>
+</html>

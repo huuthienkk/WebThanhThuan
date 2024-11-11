@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Khách Hàng</title>
+    <link rel="stylesheet" href="{% static 'css/stylehomes.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_tour_registrations.css' %}">
+</head>
+<body>
+
+    <!-- Nhúng file header.html vào đây -->
+    {% include 'Staff/header_staff.html' %}
+    
+    <main>
+        <h1>Danh Sách Khách Hàng Đã Đăng Ký Tour</h1>
+        <p>Danh sách khách hàng đã đăng ký tour của bạn.</p>
+        
+        {% if registrations %}
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Tên khách hàng</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Tour</th>
+                        <th style="border: 1px solid #ddd; padding: 8px;">Ngày đăng ký</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for registration in registrations %}
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;">{{ registration.customer_name }}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">{{ registration.tour.name }}</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">{{ registration.registration_date }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Hiện không có khách hàng nào đã đăng ký tour.</p>
+        {% endif %}
+    </main>
+
+</body>
+</html>

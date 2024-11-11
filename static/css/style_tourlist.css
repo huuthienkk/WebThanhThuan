@@ -1,0 +1,177 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    background-color: #333; /* Màu nền tối hơn */
+    color: white;
+    padding: 20px; /* Đặt padding giống như đoạn mã thứ hai */
+    text-align: center;
+    font-size: 28px; /* Thay đổi kích thước chữ giống như đoạn mã thứ hai */
+    font-weight: bold;
+}
+
+/* Navigation styling */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1E90FF;
+    padding: 10px;
+}
+
+nav a, .dropbtn {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav a:hover, .dropbtn:hover {
+    background-color: #4682B4; /* Màu xanh nước biển đậm hơn */
+    border-radius: 5px;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a, .dropdown-content button {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover, .dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+main {
+    text-align: center;
+    padding: 50px;
+}
+
+/* Tạo khoảng cách cho phần tìm kiếm */
+.search-container {
+    margin: 20px 0; /* Tạo khoảng cách trên và dưới */
+}
+
+/* Khung danh sách tour */
+.tour-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các ô */
+    justify-content: center; /* Căn giữa danh sách tour */
+}
+
+/* Khung cho từng tour */
+.tour-card {
+    background-color: #fff; /* Màu nền trắng cho ô */
+    border: 1px solid #ddd; /* Đường viền xám nhạt */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng đổ bóng */
+    padding: 20px; /* Padding bên trong ô */
+    width: 300px; /* Độ rộng của ô */
+    text-align: center; /* Căn giữa nội dung trong ô */
+}
+
+/* Tiêu đề tour */
+.tour-card h3 {
+    color: #1E90FF; /* Màu xanh cho tiêu đề */
+    margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+/* Các nút hành động */
+.tour-actions {
+    margin-top: 10px; /* Khoảng cách trên */
+}
+
+.btn-edit, .btn-delete, .btn-add {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #1E90FF; /* Màu xanh */
+    color: white;
+    border-radius: 5px; /* Bo tròn nút */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+.btn-edit:hover, .btn-delete:hover, .btn-add:hover {
+    background-color: #4682B4; /* Màu xanh đậm hơn khi hover */
+}
+
+/* Các nút khác */
+button {
+    background-color: #FF8C00; /* Màu cam nhạt */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #FF4500; /* Màu cam đậm hơn */
+}
+
+h1 {
+    color: #1E90FF;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center; /* Căn giữa tiêu đề */
+    color: #333; /* Màu sắc cho tiêu đề */
+    font-family: Arial, sans-serif; /* Font chữ */
+}
+
+/* Form tìm kiếm */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px; /* Khoảng cách bên phải */
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Màu nền cho nút submit */
+    color: white; /* Màu chữ cho nút */
+    padding: 10px; /* Padding cho nút */
+    border: none; /* Không viền */
+    border-radius: 5px; /* Bo tròn góc nút */
+    cursor: pointer; /* Đổi con trỏ khi hover */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Màu nền khi hover */
+}
